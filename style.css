@@ -1,0 +1,157 @@
+:root {
+  --bg-box-color: blue;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-image: url(/images/bg-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: hsl(257, 40%, 49%);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 375px;
+  height: 100vh;
+}
+.logo {
+  margin-top: 40px;
+}
+.body {
+  text-align: center;
+  color: #ffffff;
+  padding: 45px;
+}
+.body h1 {
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+}
+.body p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-bottom: 24px;
+}
+#btnRegister {
+  width: 200px;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  color: #684bb1;
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.27);
+  cursor: pointer;
+  outline: none;
+  transition: ease-in-out all 0.2s;
+}
+#btnRegister:hover {
+  background-color: #e880e8;
+  color: #ffffff;
+}
+footer {
+  margin: 40px 0px;
+}
+.mockup {
+  width: 296px;
+}
+
+.container__symbols {
+  display: flex;
+}
+
+.circle {
+  --bg-box-color: var(--Blue);
+  --bg-circle-color: #ffffff;
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--Very-Pale-Blue);
+  border-radius: 50%;
+  margin: 24px 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--bg-circle-color);
+  cursor: pointer;
+}
+.box {
+  background: var(--bg-box-color);
+}
+.box__sm {
+  width: 7px;
+  height: 14px;
+}
+.box__md {
+  width: 15px;
+  height: 15px;
+}
+.box__lg {
+  width: 20px;
+  height: 20px;
+}
+.circle:hover {
+  --bg-box-color: #ffffff;
+  --bg-circle-color: var(--Blue);
+}
+
+@media (min-width: 1024px) {
+  .container {
+    width: 1440px;
+    flex-direction: row;
+    justify-content: stretch;
+
+    position: relative;
+  }
+  .logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .mockup {
+    width: 700px;
+  }
+  .body {
+    height: 520px;
+    width: 520px;
+    padding: 0px;
+    position: relative;
+    text-align: left;
+    margin-left: 80px;
+  }
+  .body h1 {
+    font-size: 2.5rem;
+    line-height: 3.75rem;
+  }
+  .body p {
+    font-size: 1.125rem;
+    line-height: 1.7rem;
+  }
+  #btnRegister {
+    width: 200px;
+    height: 56px;
+    border-radius: 28px;
+    position: absolute;
+    left: 0;
+  }
+  footer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}
